@@ -7,12 +7,8 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-//images
-import Clear from '../../public/assets/icons/clear-sky-icon.svg'
-
 
 export default function Forecast() {
-  // const [weather, setWeather] = useState(null);
   const [location, setLocation] = useState(""); //city location
 
   const [weatherData, setWeatherData] = useState<any>({});
@@ -25,8 +21,6 @@ export default function Forecast() {
 
   const API_KEY = process.env.NEXT_PUBLIC_API;
 
-  // const url = `https://api.openweathermap.org/
-  // data/2.5/weather?q=${location}&units=imperial&apiKey=${apiKey}`
 
   async function getWeatherForecast() {
     console.log("button pressed");
@@ -47,19 +41,6 @@ export default function Forecast() {
       console.log(err);
     }
   }
-
-  // console.log(locationInput);
-
-  // const GrabWeatherForecast = () => {
-  //   axios.get(url)
-  //     .then((response) => {
-  //       setWeather(response.data);
-  //       console.log(response.data);
-  //     }).catch(err => {
-  //       console.log(err)
-  //     })
-  //   }
-
   return (
     <>
       <Head>
