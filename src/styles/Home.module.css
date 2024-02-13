@@ -1,0 +1,56 @@
+.main {
+}
+
+.backgroundImage {
+  position: relative;
+  z-index: -5;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.buttonBox {
+  margin-top: 4em;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  width: 210px;
+  height: 53px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .a {    
+  transform: scaleX(0);
+  transform-origin: bottom right; transition: transform 0.25s linear;
+}
+.a:hover { 
+  transform-origin: bottom left;
+  transform: scalex(1);
+} */
+
+.hoverEffect {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hoverEffect::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hoverEffect:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
